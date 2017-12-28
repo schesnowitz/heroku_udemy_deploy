@@ -84,11 +84,14 @@ Rails.application.configure do
   config.logger = ActiveSupport::Logger.new(
     config.paths['log'].first, 1, 50 * 1024 * 1024)
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
+
+  
+config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+if ENV["RAILS_LOG_TO_STDOUT"].present?
+  logger           = ActiveSupport::Logger.new(STDOUT)
+  logger.formatter = config.log_formatter
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
+end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
