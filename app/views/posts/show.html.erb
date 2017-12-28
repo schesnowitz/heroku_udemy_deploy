@@ -1,0 +1,26 @@
+<p>
+    <% if @post.user.image.present? %>
+    <%= image_tag @post.user.image_url(:thumb), class: 'rounded-circle' %>
+    <% else %>
+    <%= image_tag 'no_image.png', class: 'rounded-circle' %>
+    <% end %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+<p>Comments</p>
+<%= render @post.comments.order(created_at: :desc ) %> 
+<p>
+  <strong>Add Comment:</strong>
+  <%= render 'comments/form' %> 
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) if @post.user == current_user %> |
+<%= link_to 'Back', posts_path %>
