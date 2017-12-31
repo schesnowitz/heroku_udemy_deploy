@@ -1,4 +1,9 @@
 git add -A
+<<<<<<< HEAD
 git commit -m "test heroku redis "
+=======
+git commit -m "heroku set worker start in proc"
+>>>>>>> de1f99563e36083fddb4e5fb28258d422b953044
 git push origin master
 git push heroku master
+
