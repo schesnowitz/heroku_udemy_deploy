@@ -1,5 +1,5 @@
 git add -A
-git commit -m "test heroku redis "
+git commit -m "test heroku redis update yml "
 git push origin master
 git push heroku master
 
