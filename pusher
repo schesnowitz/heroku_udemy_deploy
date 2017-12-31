@@ -1,7 +1,5 @@
 git add -A
-git commit -m ":queues:
-  - default
-  - mailers"
-git push origin master
-git push heroku master
+git commit -m "redis/sidekiq setu"
+git push origin redis
+
 
