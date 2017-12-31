@@ -110,6 +110,12 @@ end
  config.action_mailer.default_url_options = { host: "https://udemy-rails-course.herokuapp.com" } 
  
 # ENV["REDISTOGO_URL"] = 'redis://redistogo:e6861400f1691b78695bf8bfc788053a@soldierfish.redistogo.com:9881/'
+# heroku addons:create redistogo:nano
+
+# heroku config:set REDIS_PROVIDER=REDISTOGO_URL
+
+# heroku ps:scale worker=1
+
 end
 
 
