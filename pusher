@@ -1,4 +1,4 @@
 git add -A
-git commit -m "heroku deploy carrier/fog"
+git commit -m "test heroku redis "
 git push origin master
 git push heroku master
