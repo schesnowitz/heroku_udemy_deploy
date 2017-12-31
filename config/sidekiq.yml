@@ -1,4 +1,4 @@
-:verbose false
+:verbose: false
 :concurrency: 10
 :timeout: 8
 
