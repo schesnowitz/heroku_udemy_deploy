@@ -1,5 +1,5 @@
 git add -A
-git commit -m "redis/sidekiq setu"
-git push origin redis
+git commit -m "Master Deploy"
+git push origin master
 
 
